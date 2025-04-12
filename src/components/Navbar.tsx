@@ -21,17 +21,6 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Add ISO certification image
-  const isoCertification = (
-    <div className="hidden lg:flex items-center ml-4">
-      <img 
-        src="/lovable-uploads/173a07d9-c5de-4274-9e6e-aef06c4a848a.png" 
-        alt="ISO Certification" 
-        className="h-12 w-auto" 
-      />
-    </div>
-  );
-
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -50,7 +39,6 @@ const Navbar = () => {
                 className="h-10 w-auto" 
               />
             </Link>
-            {isoCertification}
           </div>
 
           {/* Desktop Navigation */}
@@ -120,13 +108,6 @@ const Navbar = () => {
               <User className="h-5 w-5" />
               <span>Tài khoản</span>
             </Link>
-            <div className="flex justify-center py-2">
-              <img 
-                src="/lovable-uploads/173a07d9-c5de-4274-9e6e-aef06c4a848a.png" 
-                alt="ISO Certification" 
-                className="h-10 w-auto" 
-              />
-            </div>
             <Button size="sm" className="w-full">
               Đăng nhập
             </Button>
