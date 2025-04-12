@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { LockKeyhole, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Github } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Github } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -12,14 +12,17 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <Link to="/" className="flex items-center space-x-2 mb-4">
-              <LockKeyhole className="h-6 w-6 text-primary" />
-              <span className="text-xl font-bold gradient-text">KeyLicense</span>
+              <img 
+                src="/lovable-uploads/3a53cd44-aca9-4ce8-be34-607c7c8ed5d1.png" 
+                alt="LABone Logo" 
+                className="h-10 w-auto" 
+              />
             </Link>
             <p className="text-muted-foreground mb-4">
-              Giải pháp quản lý license key toàn diện cho phần mềm của bạn, bảo vệ tài sản trí tuệ và tăng doanh thu.
+              LABone - All For Science. Chuyên cung cấp các thiết bị và giải pháp khoa học kỹ thuật cao, bao gồm máy đếm khuẩn lạc KingAutoColony cùng hệ thống quản lý bản quyền.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.facebook.com/laboneofficial/" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
@@ -39,31 +42,31 @@ const Footer = () => {
           
           {/* Links */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Liên kết nhanh</h3>
+            <h3 className="font-semibold text-lg mb-4">Sản phẩm</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">
-                  Trang chủ
+                  KingAutoColony
                 </Link>
               </li>
               <li>
                 <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
-                  Giới thiệu
+                  Thiết bị phòng thí nghiệm
                 </Link>
               </li>
               <li>
                 <Link to="/features" className="text-muted-foreground hover:text-primary transition-colors">
-                  Tính năng
+                  Hóa chất & Vật tư
                 </Link>
               </li>
               <li>
                 <Link to="/pricing" className="text-muted-foreground hover:text-primary transition-colors">
-                  Bảng giá
+                  Dịch vụ kỹ thuật
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
-                  Liên hệ
+                  Phần mềm quản lý
                 </Link>
               </li>
             </ul>
@@ -75,7 +78,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link to="/docs" className="text-muted-foreground hover:text-primary transition-colors">
-                  Tài liệu API
+                  Hướng dẫn sử dụng
                 </Link>
               </li>
               <li>
@@ -90,12 +93,12 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/tutorials" className="text-muted-foreground hover:text-primary transition-colors">
-                  Hướng dẫn
+                  Video hướng dẫn
                 </Link>
               </li>
               <li>
                 <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">
-                  Blog
+                  Tin tức & Blog
                 </Link>
               </li>
             </ul>
@@ -108,19 +111,19 @@ const Footer = () => {
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-primary mr-2 mt-0.5" />
                 <span className="text-muted-foreground">
-                  123 Đường ABC, Quận 1, TP. Hồ Chí Minh
+                  Số 136 Phạm Văn Bách, Yên Hòa, Cầu Giấy, Hà Nội
                 </span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 text-primary mr-2" />
                 <span className="text-muted-foreground">
-                  +84 123 456 789
+                  024 3562 7828
                 </span>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-primary mr-2" />
                 <span className="text-muted-foreground">
-                  contact@keylicense.vn
+                  info@labone.vn
                 </span>
               </li>
             </ul>
@@ -129,7 +132,7 @@ const Footer = () => {
         
         <div className="border-t border-border mt-12 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-muted-foreground text-sm mb-4 md:mb-0">
-            © {currentYear} KeyLicense. Tất cả quyền được bảo lưu.
+            © {currentYear} LABone - All For Science. Tất cả quyền được bảo lưu.
           </p>
           <div className="flex space-x-6">
             <Link to="/privacy" className="text-sm text-muted-foreground hover:text-primary transition-colors">

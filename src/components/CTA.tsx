@@ -14,26 +14,26 @@ const CTA = () => {
           </div>
           
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Bảo vệ phần mềm của bạn với hệ thống License Key tiên tiến
+            Bảo vệ máy đếm khuẩn lạc KingAutoColony của bạn với hệ thống License Key chính hãng
           </h2>
           
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Tăng doanh thu và bảo vệ sản phẩm của bạn khỏi việc sao chép trái phép. 
-            Bắt đầu sử dụng ngay hôm nay!
+            Đảm bảo thiết bị của bạn hoạt động chính xác và được hỗ trợ kỹ thuật từ LABone. 
+            Kích hoạt bản quyền ngay hôm nay!
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="group">
-              Dùng thử miễn phí
+              Kích hoạt thiết bị
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button variant="outline" size="lg">
-              Xem demo
+              Liên hệ hỗ trợ
             </Button>
           </div>
           
           <div className="mt-10 text-sm text-muted-foreground">
-            <p>Không cần thẻ tín dụng. Dùng thử miễn phí 14 ngày với đầy đủ tính năng.</p>
+            <p>Bảo hành và hỗ trợ kỹ thuật trọn đời từ đội ngũ chuyên gia LABone.</p>
           </div>
         </div>
       </div>

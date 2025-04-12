@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { LockKeyhole, Menu, X, Shield, User, Home, Key } from "lucide-react";
+import { Menu, X, Shield, User, Home, Key } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -32,8 +32,11 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
-            <LockKeyhole className="h-8 w-8 text-primary animate-pulse-slow" />
-            <span className="text-xl font-bold gradient-text">KeyLicense</span>
+            <img 
+              src="/lovable-uploads/3a53cd44-aca9-4ce8-be34-607c7c8ed5d1.png" 
+              alt="LABone Logo" 
+              className="h-10 w-auto" 
+            />
           </Link>
 
           {/* Desktop Navigation */}

@@ -3,36 +3,36 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Copy, KeyRound, CheckCircle2, Monitor, Calendar } from "lucide-react";
+import { Copy, KeyRound, CheckCircle2, Monitor, Calendar, Fingerprint } from "lucide-react";
 import { toast } from "sonner";
 
 const KeyGeneration = () => {
   const [generatedKey, setGeneratedKey] = useState("");
   const [copied, setCopied] = useState(false);
-  const [productName, setProductName] = useState("");
-  const [computerName, setComputerName] = useState("");
+  const [serialNumber, setSerialNumber] = useState("");
+  const [modelType, setModelType] = useState("KingAutoColony Standard");
   const [expiryDate, setExpiryDate] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
   const generateRandomKey = () => {
-    // Format: XXXX-XXXX-XXXX-XXXX
+    // Format: LAB-XXXX-XXXX-XXXX
     const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-    let result = "";
+    let result = "LAB-";
     
-    // Generate 4 groups of 4 characters
-    for (let g = 0; g < 4; g++) {
+    // Generate 3 groups of 4 characters
+    for (let g = 0; g < 3; g++) {
       for (let i = 0; i < 4; i++) {
         result += characters.charAt(Math.floor(Math.random() * characters.length));
       }
-      if (g < 3) result += "-";
+      if (g < 2) result += "-";
     }
     
     return result;
   };
 
   const handleGenerateKey = () => {
-    if (!productName) {
-      toast.error("Vui lòng nhập tên sản phẩm");
+    if (!serialNumber) {
+      toast.error("Vui lòng nhập số serial của thiết bị");
       return;
     }
     
@@ -62,9 +62,9 @@ const KeyGeneration = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Quản lý License Key</h2>
+            <h2 className="text-3xl font-bold mb-4">Quản lý License Key cho KingAutoColony</h2>
             <p className="text-muted-foreground">
-              Tạo và quản lý license key bảo mật cho phần mềm của bạn
+              Tạo và quản lý license key bảo mật cho máy đếm khuẩn lạc KingAutoColony của bạn
             </p>
           </div>
           
@@ -87,32 +87,40 @@ const KeyGeneration = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-4">
                     <div>
-                      <label className="text-sm font-medium mb-1 block">
-                        Tên sản phẩm <span className="text-red-500">*</span>
+                      <label className="text-sm font-medium mb-1 block flex items-center">
+                        <Fingerprint className="h-4 w-4 mr-1" />
+                        Số serial thiết bị <span className="text-red-500">*</span>
                       </label>
                       <Input 
-                        placeholder="Nhập tên sản phẩm" 
-                        value={productName} 
-                        onChange={(e) => setProductName(e.target.value)}
+                        placeholder="Nhập số serial thiết bị" 
+                        value={serialNumber} 
+                        onChange={(e) => setSerialNumber(e.target.value)}
                       />
+                      <p className="text-xs text-muted-foreground mt-1">
+                        Số serial nằm ở mặt sau của máy đếm khuẩn lạc KingAutoColony
+                      </p>
                     </div>
                     
                     <div>
                       <label className="text-sm font-medium mb-1 block flex items-center">
                         <Monitor className="h-4 w-4 mr-1" />
-                        Định danh máy tính (tùy chọn)
+                        Loại máy
                       </label>
-                      <Input 
-                        placeholder="Nhập định danh máy tính" 
-                        value={computerName} 
-                        onChange={(e) => setComputerName(e.target.value)}
-                      />
+                      <select 
+                        className="w-full px-3 py-2 bg-background border border-input rounded-md"
+                        value={modelType}
+                        onChange={(e) => setModelType(e.target.value)}
+                      >
+                        <option value="KingAutoColony Standard">KingAutoColony Standard</option>
+                        <option value="KingAutoColony Pro">KingAutoColony Pro</option>
+                        <option value="KingAutoColony Advanced">KingAutoColony Advanced</option>
+                      </select>
                     </div>
                     
                     <div>
                       <label className="text-sm font-medium mb-1 block flex items-center">
                         <Calendar className="h-4 w-4 mr-1" />
-                        Ngày hết hạn (tùy chọn)
+                        Thời hạn bảo hành
                       </label>
                       <Input 
                         type="date" 
@@ -133,7 +141,7 @@ const KeyGeneration = () => {
                   <div className="bg-secondary/30 p-6 rounded-lg flex flex-col items-center justify-center">
                     <div className="text-center">
                       <KeyRound className="h-10 w-10 text-primary mx-auto mb-4" />
-                      <h3 className="text-lg font-semibold mb-2">License Key của bạn</h3>
+                      <h3 className="text-lg font-semibold mb-2">License Key cho KingAutoColony</h3>
                       
                       {generatedKey ? (
                         <div className="animate-slide-up">
@@ -151,12 +159,12 @@ const KeyGeneration = () => {
                             </Button>
                           </div>
                           <p className="text-xs text-muted-foreground">
-                            Key này được mã hóa và bảo mật. Chỉ hoạt động với sản phẩm và máy tính được chỉ định.
+                            Key này được mã hóa và chỉ hoạt động với máy đếm khuẩn lạc KingAutoColony có số serial tương ứng.
                           </p>
                         </div>
                       ) : (
                         <p className="text-muted-foreground text-sm">
-                          Nhập thông tin sản phẩm và nhấn "Tạo License Key" để tạo key mới
+                          Nhập thông tin thiết bị và nhấn "Tạo License Key" để tạo key kích hoạt
                         </p>
                       )}
                     </div>
@@ -170,14 +178,14 @@ const KeyGeneration = () => {
                     <label className="text-sm font-medium mb-1 block">
                       License Key <span className="text-red-500">*</span>
                     </label>
-                    <Input placeholder="Nhập license key" />
+                    <Input placeholder="Nhập license key (LAB-XXXX-XXXX-XXXX)" />
                   </div>
                   
                   <div>
                     <label className="text-sm font-medium mb-1 block">
-                      Tên sản phẩm <span className="text-red-500">*</span>
+                      Số serial thiết bị <span className="text-red-500">*</span>
                     </label>
-                    <Input placeholder="Nhập tên sản phẩm" />
+                    <Input placeholder="Nhập số serial thiết bị" />
                   </div>
                   
                   <Button className="w-full">

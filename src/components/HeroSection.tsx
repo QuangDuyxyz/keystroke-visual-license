@@ -1,6 +1,5 @@
 
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
 import { ShieldCheck, Monitor, Key, ChevronRight } from "lucide-react";
 
 const HeroSection = () => {
@@ -11,20 +10,20 @@ const HeroSection = () => {
           {/* Left Content */}
           <div className="lg:w-1/2 space-y-6">
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-              <span className="animate-pulse mr-1">•</span> Hệ thống quản lý bản quyền an toàn
+              <span className="animate-pulse mr-1">•</span> Hệ thống quản lý bản quyền chính hãng
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Hệ thống <span className="gradient-text">License Key</span> bảo mật cho máy tính
+              <span className="gradient-text">KingAutoColony</span> <br />Máy đếm khuẩn lạc
             </h1>
             
             <p className="text-lg text-muted-foreground">
-              Giải pháp quản lý bản quyền phần mềm toàn diện. Bảo vệ sản phẩm của bạn và kiểm soát việc sử dụng với hệ thống cấp phép bảo mật cao.
+              Giải pháp quản lý bản quyền cho máy đếm khuẩn lạc KingAutoColony từ LABone. Bảo vệ thiết bị và đảm bảo tính xác thực với hệ thống cấp phép bảo mật cao.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button size="lg" className="group">
-                Bắt đầu ngay
+                Kích hoạt thiết bị
                 <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button variant="outline" size="lg">
@@ -54,15 +53,15 @@ const HeroSection = () => {
               <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-blue-600 rounded-lg blur opacity-30 animate-pulse-slow"></div>
               <div className="relative bg-card rounded-lg shadow-xl overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" 
-                  alt="License Key Management"
+                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" 
+                  alt="KingAutoColony - Máy đếm khuẩn lạc"
                   className="w-full h-auto object-cover rounded-lg"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/90 to-background/0 p-6">
                   <div className="flex items-center gap-3 text-sm font-medium">
                     <div className="flex items-center gap-1">
                       <span className="inline-block w-2 h-2 bg-green-500 rounded-full"></span>
-                      <span>Bảo mật</span>
+                      <span>Chính xác</span>
                     </div>
                     <div className="flex items-center gap-1">
                       <span className="inline-block w-2 h-2 bg-blue-500 rounded-full"></span>
@@ -70,7 +69,7 @@ const HeroSection = () => {
                     </div>
                     <div className="flex items-center gap-1">
                       <span className="inline-block w-2 h-2 bg-purple-500 rounded-full"></span>
-                      <span>Nhanh chóng</span>
+                      <span>Hiệu quả</span>
                     </div>
                   </div>
                 </div>
