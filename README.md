@@ -1,58 +1,52 @@
-# Welcome to your Lovable project
+# LABone AutoColony - Hệ thống quản lý bản quyền
 
-## Project info
+## Thông tin Project
 
-**URL**: https://lovable.dev/projects/7762e354-8345-4916-b5c5-b3a73a682d8b
+**URL**: https://labone-autocolony.vercel.app
 
-## How can I edit this code?
+## Cách chỉnh sửa code
 
-There are several ways of editing your application.
+Có nhiều cách để chỉnh sửa ứng dụng này:
 
-**Use Lovable**
+**Sử dụng IDE yêu thích của bạn**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/7762e354-8345-4916-b5c5-b3a73a682d8b) and start prompting.
+Bạn có thể làm việc locally bằng IDE của mình, clone repo này và push các thay đổi.
 
-Changes made via Lovable will be committed automatically to this repo.
+Yêu cầu: Cài đặt Node.js & npm - [cài đặt với nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Các bước thực hiện:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Bước 1: Clone repository
+git clone https://github.com/QuangDuyxyz/keystroke-visual-license.git
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Bước 2: Di chuyển vào thư mục project
+cd keystroke-visual-license
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Bước 3: Cài đặt dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Bước 4: Chạy development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+**Chỉnh sửa trực tiếp trên GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- Truy cập file cần sửa
+- Click nút "Edit" (biểu tượng bút chì) ở góc phải
+- Thực hiện thay đổi và commit
 
-**Use GitHub Codespaces**
+**Sử dụng GitHub Codespaces**
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- Truy cập trang chính của repository
+- Click nút "Code" (màu xanh lá) ở góc phải
+- Chọn tab "Codespaces"
+- Click "New codespace" để khởi tạo môi trường
+- Chỉnh sửa file và commit/push thay đổi
 
-## What technologies are used for this project?
+## Công nghệ sử dụng
 
-This project is built with:
+Project được xây dựng với:
 
 - Vite
 - TypeScript
@@ -60,14 +54,19 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
-## How can I deploy this project?
+## Cách deploy
 
-Simply open [Lovable](https://lovable.dev/projects/7762e354-8345-4916-b5c5-b3a73a682d8b) and click on Share -> Publish.
+Project được deploy tự động trên Vercel:
 
-## Can I connect a custom domain to my Lovable project?
+1. Mỗi khi có push code lên GitHub
+2. Vercel sẽ tự động build và deploy
+3. Kiểm tra status tại: https://vercel.com/labonekingautocolony/labone-autocolony
 
-Yes it is!
+## Custom Domain
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Để kết nối domain tùy chỉnh:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+1. Truy cập Vercel Dashboard
+2. Vào Project Settings > Domains
+3. Click "Add Domain"
+4. Làm theo hướng dẫn cấu hình DNS
