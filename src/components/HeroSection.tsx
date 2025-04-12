@@ -53,8 +53,8 @@ const HeroSection = () => {
               <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-blue-600 rounded-lg blur opacity-30 animate-pulse-slow"></div>
               <div className="relative bg-card rounded-lg shadow-xl overflow-hidden">
                 <img 
-                  src="/lovable-uploads/daa7b16c-422f-4ec2-8bfd-6e42e3fb0001.png" 
-                  alt="LABone - Chuyên gia trong phòng thí nghiệm"
+                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" 
+                  alt="KingAutoColony - Máy đếm khuẩn lạc"
                   className="w-full h-auto object-cover rounded-lg"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/90 to-background/0 p-6">
