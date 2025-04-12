@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Facebook, Youtube, Instagram, Linkedin, Github } from "lucide-react";
 
@@ -11,12 +10,15 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <Link to="/" className="flex items-center space-x-2 mb-4">
-              <img 
-                src="/lovable-uploads/3a53cd44-aca9-4ce8-be34-607c7c8ed5d1.png" 
-                alt="LABone Logo" 
-                className="h-10 w-auto" 
-              />
+            <Link to="/" className="flex items-center space-x-2 mb-4 group">
+              <div className="relative">
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-blue-600/20 rounded-lg blur opacity-75 group-hover:opacity-100 group-hover:animate-pulse-slow transition-all duration-500"></div>
+                <img 
+                  src="/lovable-uploads/3a53cd44-aca9-4ce8-be34-607c7c8ed5d1.png" 
+                  alt="LABone Logo" 
+                  className="relative h-24 w-auto transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:brightness-110 group-hover:contrast-110" 
+                />
+              </div>
             </Link>
             <p className="text-muted-foreground mb-4">
               Công Ty TNHH Thiết Bị Khoa Học LABone - All For Science. Chuyên cung cấp các thiết bị và giải pháp khoa học kỹ thuật cao, bao gồm máy đếm khuẩn lạc KingAutoColony cùng hệ thống quản lý bản quyền.
@@ -25,7 +27,7 @@ const Footer = () => {
               <p>Công ty LABone được chứng nhận ISO 9001 và ISO 13485</p>
             </div>
             <div className="flex space-x-4 mb-4">
-              <a href="https://www.facebook.com/laboneofficial/" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.facebook.com/LABoneScientific" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
