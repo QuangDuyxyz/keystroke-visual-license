@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
-import { ShieldCheck, ArrowRight } from "lucide-react";
+import { ShieldCheck, ArrowRight, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const CTA = () => {
   return (
@@ -27,13 +28,17 @@ const CTA = () => {
               Kích hoạt thiết bị
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="outline" size="lg">
-              Liên hệ hỗ trợ
-            </Button>
+            <Link to="tel:0978782147">
+              <Button variant="outline" size="lg" className="flex items-center">
+                <Phone className="mr-2 h-4 w-4" />
+                Hotline: 0978 782 147
+              </Button>
+            </Link>
           </div>
           
           <div className="mt-10 text-sm text-muted-foreground">
             <p>Bảo hành và hỗ trợ kỹ thuật trọn đời từ đội ngũ chuyên gia LABone.</p>
+            <p className="mt-2">Công ty LABone được chứng nhận ISO 9001 và ISO 13485</p>
           </div>
         </div>
       </div>

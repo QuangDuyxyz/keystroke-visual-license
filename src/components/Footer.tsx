@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Github } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Youtube, Instagram, Linkedin, Github } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -19,23 +19,23 @@ const Footer = () => {
               />
             </Link>
             <p className="text-muted-foreground mb-4">
-              LABone - All For Science. Chuyên cung cấp các thiết bị và giải pháp khoa học kỹ thuật cao, bao gồm máy đếm khuẩn lạc KingAutoColony cùng hệ thống quản lý bản quyền.
+              Công Ty TNHH Thiết Bị Khoa Học LABone - All For Science. Chuyên cung cấp các thiết bị và giải pháp khoa học kỹ thuật cao, bao gồm máy đếm khuẩn lạc KingAutoColony cùng hệ thống quản lý bản quyền.
             </p>
-            <div className="flex space-x-4">
+            <div className="mb-4 text-sm text-muted-foreground">
+              <p>Công ty LABone được chứng nhận ISO 9001 và ISO 13485</p>
+            </div>
+            <div className="flex space-x-4 mb-4">
               <a href="https://www.facebook.com/laboneofficial/" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Twitter className="h-5 w-5" />
+                <Youtube className="h-5 w-5" />
               </a>
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Github className="h-5 w-5" />
               </a>
             </div>
           </div>
@@ -51,22 +51,22 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
-                  Thiết bị phòng thí nghiệm
+                  Tủ ấm - Tủ ấm vi sinh
                 </Link>
               </li>
               <li>
                 <Link to="/features" className="text-muted-foreground hover:text-primary transition-colors">
-                  Hóa chất & Vật tư
+                  Tủ sấy - Tủ sấy phòng thí nghiệm
                 </Link>
               </li>
               <li>
                 <Link to="/pricing" className="text-muted-foreground hover:text-primary transition-colors">
-                  Dịch vụ kỹ thuật
+                  Tủ an toàn sinh học
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
-                  Phần mềm quản lý
+                  Phòng sạch - Laminar flow
                 </Link>
               </li>
             </ul>
@@ -74,31 +74,31 @@ const Footer = () => {
           
           {/* Support */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Hỗ trợ</h3>
+            <h3 className="font-semibold text-lg mb-4">Công ty</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/docs" className="text-muted-foreground hover:text-primary transition-colors">
-                  Hướng dẫn sử dụng
+                  Về chúng tôi
                 </Link>
               </li>
               <li>
                 <Link to="/support" className="text-muted-foreground hover:text-primary transition-colors">
-                  Hỗ trợ kỹ thuật
+                  Thương hiệu
                 </Link>
               </li>
               <li>
                 <Link to="/faq" className="text-muted-foreground hover:text-primary transition-colors">
-                  FAQ
+                  Thị trường
                 </Link>
               </li>
               <li>
                 <Link to="/tutorials" className="text-muted-foreground hover:text-primary transition-colors">
-                  Video hướng dẫn
+                  Tài liệu
                 </Link>
               </li>
               <li>
                 <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">
-                  Tin tức & Blog
+                  Chứng nhận
                 </Link>
               </li>
             </ul>
@@ -111,20 +111,23 @@ const Footer = () => {
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-primary mr-2 mt-0.5" />
                 <span className="text-muted-foreground">
-                  Số 136 Phạm Văn Bách, Yên Hòa, Cầu Giấy, Hà Nội
+                  228/13/3 Nguyễn Thị Lắng, Tân Phú Trung, Củ Chi, Thành phố Hồ Chí Minh
                 </span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 text-primary mr-2" />
                 <span className="text-muted-foreground">
-                  024 3562 7828
+                  Hotline: 0978 782 147
                 </span>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-primary mr-2" />
                 <span className="text-muted-foreground">
-                  info@labone.vn
+                  Email: info@labone.vn
                 </span>
+              </li>
+              <li className="text-muted-foreground ml-7">
+                MST: 0312088377
               </li>
             </ul>
           </div>
@@ -132,7 +135,7 @@ const Footer = () => {
         
         <div className="border-t border-border mt-12 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-muted-foreground text-sm mb-4 md:mb-0">
-            © {currentYear} LABone - All For Science. Tất cả quyền được bảo lưu.
+            © {currentYear} Công Ty TNHH Thiết Bị Khoa Học LABone - All For Science. Tất cả quyền được bảo lưu.
           </p>
           <div className="flex space-x-6">
             <Link to="/privacy" className="text-sm text-muted-foreground hover:text-primary transition-colors">

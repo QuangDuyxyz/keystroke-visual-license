@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Shield, User, Home, Key } from "lucide-react";
+import { Menu, X, Shield, User, Home, Key, Download, Info, Award, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -21,6 +21,17 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Add ISO certification image
+  const isoCertification = (
+    <div className="hidden lg:flex items-center ml-4">
+      <img 
+        src="/lovable-uploads/173a07d9-c5de-4274-9e6e-aef06c4a848a.png" 
+        alt="ISO Certification" 
+        className="h-12 w-auto" 
+      />
+    </div>
+  );
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -31,13 +42,16 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center space-x-2">
-            <img 
-              src="/lovable-uploads/3a53cd44-aca9-4ce8-be34-607c7c8ed5d1.png" 
-              alt="LABone Logo" 
-              className="h-10 w-auto" 
-            />
-          </Link>
+          <div className="flex items-center">
+            <Link to="/" className="flex items-center space-x-2">
+              <img 
+                src="/lovable-uploads/3a53cd44-aca9-4ce8-be34-607c7c8ed5d1.png" 
+                alt="LABone Logo" 
+                className="h-10 w-auto" 
+              />
+            </Link>
+            {isoCertification}
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
@@ -53,9 +67,13 @@ const Navbar = () => {
               <Shield className="h-4 w-4" />
               <span>Bảo mật</span>
             </Link>
-            <Link to="/dashboard" className="text-foreground/80 hover:text-primary transition-colors font-medium flex items-center gap-1">
-              <User className="h-4 w-4" />
-              <span>Tài khoản</span>
+            <Link to="/about" className="text-foreground/80 hover:text-primary transition-colors font-medium flex items-center gap-1">
+              <Info className="h-4 w-4" />
+              <span>Về chúng tôi</span>
+            </Link>
+            <Link to="/download" className="text-foreground/80 hover:text-primary transition-colors font-medium flex items-center gap-1">
+              <Download className="h-4 w-4" />
+              <span>Tài liệu</span>
             </Link>
             <Button size="sm" className="animate-slide-up">
               Đăng nhập
@@ -90,10 +108,25 @@ const Navbar = () => {
               <Shield className="h-5 w-5" />
               <span>Bảo mật</span>
             </Link>
+            <Link to="/about" className="text-foreground hover:text-primary transition-colors font-medium flex items-center gap-2 p-2">
+              <Info className="h-5 w-5" />
+              <span>Về chúng tôi</span>
+            </Link>
+            <Link to="/download" className="text-foreground hover:text-primary transition-colors font-medium flex items-center gap-2 p-2">
+              <Download className="h-5 w-5" />
+              <span>Tài liệu</span>
+            </Link>
             <Link to="/dashboard" className="text-foreground hover:text-primary transition-colors font-medium flex items-center gap-2 p-2">
               <User className="h-5 w-5" />
               <span>Tài khoản</span>
             </Link>
+            <div className="flex justify-center py-2">
+              <img 
+                src="/lovable-uploads/173a07d9-c5de-4274-9e6e-aef06c4a848a.png" 
+                alt="ISO Certification" 
+                className="h-10 w-auto" 
+              />
+            </div>
             <Button size="sm" className="w-full">
               Đăng nhập
             </Button>
