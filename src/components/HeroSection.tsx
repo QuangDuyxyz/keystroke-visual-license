@@ -15,12 +15,8 @@ const HeroSection = () => {
           {/* Left Content */}
           <div className="lg:w-1/2 space-y-6 animate-slide-up">
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4 hover:bg-primary/20 transition-colors duration-300">
-              <img 
-                src="/images/logo-labone.png" 
-                alt="LABone Logo" 
-                className="h-8 w-auto mr-2 hover:scale-110 transition-transform duration-300" 
-              />
-              <span className="animate-pulse mr-1">•</span> Hệ thống quản lý bản quyền chính hãng
+              <span className="animate-pulse mr-1">•</span> 
+              Hệ thống quản lý bản quyền chính hãng
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-slide-up animation-delay-200">
